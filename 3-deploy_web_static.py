@@ -20,7 +20,7 @@ def do_pack():
         return None
 
 
-env.hosts = ['54.197.49.59', '18.206.197.251']
+env.hosts = ['100.25.151.28', '54.208.160.154']
 env.user = 'ubuntu'
 
 
