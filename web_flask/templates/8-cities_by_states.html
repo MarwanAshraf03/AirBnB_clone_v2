@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<HTML lang="en">
+    <HEAD>
+        <TITLE>HBNB</TITLE>
+    </HEAD>
+    <BODY>
+        {% if dict.keys() | length != 0 %}
+        <H1>States</H1>
+        <UL>
+            {% for i, j in dict.items() %}
+            <LI>{{ i.split('.')[0] }}: <B>{{ i.split('.')[1] }}</B>
+                {% if j | length != 0 %}
+                <UL>
+                    {% for city in j %}
+                    <LI>{{ city.id }}: <B>{{ city.name }}</B></LI>
+                    {% endfor %}
+                </UL>
+                {% endif %}
+            </LI>
+            {% endfor %}
+        </UL>
+        {% endif %}
+    </BODY>
+</HTML>
